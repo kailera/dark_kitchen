@@ -15,7 +15,9 @@ public interface DarkKitchenRepository extends JpaRepository<DarkKitchen, Long> 
 
     Optional<DarkKitchen> findByName(String name);
 
-    List<DarkKitchen> findByPrecoLessThan(double preco);
+    List<DarkKitchen> findByPriceLessThan(double price);
+
+    List<DarkKitchen> findByAreaBetween(double minArea, double maxArea);
     
     Page<DarkKitchen>findAll(Pageable pageable);
 }
