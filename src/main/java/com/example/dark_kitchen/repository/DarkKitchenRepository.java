@@ -15,5 +15,7 @@ public interface DarkKitchenRepository extends JpaRepository<DarkKitchen, Long> 
 
     Optional<DarkKitchen> findByName(String name);
 
+    List<DarkKitchen> findByPrecoLessThan(double preco);
+    
     Page<DarkKitchen>findAll(Pageable pageable);
 }
